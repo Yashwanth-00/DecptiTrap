@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin Login</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#1a1a2e;display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:Arial,sans-serif}
+.box{background:#16213e;border:1px solid #0f3460;padding:40px;width:360px;border-radius:4px}
+h2{color:#e94560;text-align:center;margin-bottom:24px;font-size:20px}
+input{width:100%;padding:10px;margin-bottom:14px;background:#0f3460;border:1px solid #1a4a7a;color:#fff;border-radius:3px;font-size:14px}
+button{width:100%;padding:11px;background:#e94560;color:#fff;border:none;border-radius:3px;cursor:pointer;font-size:14px}
+.err{color:#e94560;font-size:12px;text-align:center;margin-bottom:12px}
+.footer{color:#555;font-size:11px;text-align:center;margin-top:16px}
+</style>
+</head>
+<body>
+<div class="box">
+  <h2>&#128274; Admin Panel</h2>
+  {% if error %}<div class="err">{{ error }}</div>{% endif %}
+  <form method="POST">
+    <input type="text" name="username" placeholder="Username" autocomplete="off">
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit">Login</button>
+  </form>
+  <div class="footer">Powered by AdminLite v2.1</div>
+</div>
+</body>
+</html>
